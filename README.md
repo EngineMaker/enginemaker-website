@@ -9,12 +9,15 @@ bun i
 bun dev
 ```
 
-もしくは
+## VSCodeのDev Containerで動かす
 
-```
-bun i
-bun dev --host
-```
+VSCodeでプロジェクトを開くと、右下に「Reopen in Container」というボタンが表示されるので、それをクリックしてください。  
+表示されない場合は[Dev Containerの拡張](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)をインストールしてください。  
+![](readme/devcontainer.png)
+
+
+Dev Containerで開いてしばらく待つと、localhost:4321をブラウザで開くボタンが表示されます。
+![](readme/browser-open.png)
 
 ## ステージング環境
 

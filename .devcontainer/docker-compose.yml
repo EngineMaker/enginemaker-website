@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: app
+    volumes:
+      - ..:/app
+    command: .devcontainer/run.sh
