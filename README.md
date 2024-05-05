@@ -6,6 +6,11 @@
 bun i
 bun dev
 ```
+もしくは
+```
+bun i
+bun dev --host
+```
 
 ## ステージング環境
 https://em-draft.mktoho.dev
