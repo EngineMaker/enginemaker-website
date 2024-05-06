@@ -1,0 +1,51 @@
+---
+import { getCollection } from 'astro:content'
+import Prose from '../../components/Prose.astro'
+import Layout from '../../layouts/Layout.astro'
+
+export async function getStaticPaths() {
+  const houses = await getCollection('house')
+  return houses.map((house) => ({
+    params: { slug: house.slug },
+    props: { house },
+  }))
+}
+
+const houses = await getCollection('house')
+const { house } = Astro.props
+const { Content } = await house.render()
+---
+
+<Layout title="Positivus">
+  <main
+    class="py-4 min-h-screen max-w-screen-lg mx-auto px-6 md:px-14 xl:px-14"
+  >
+    <h1 class="text-3xl my-6">{house.data.name}</h1>
+    <Prose>
+      <!-- 物件ごとの内容 -->
+      <Content />
+
+      <h2>他の物件も見る</h2>
+      <ul>
+        {
+          houses
+            .filter((other) => other.id !== house.id)
+            .sort((a, b) => a.data.order - b.data.order)
+            .map((otherHouse) => (
+              <li>
+                <a href={`/houses/${otherHouse.slug}`}>
+                  {otherHouse.data.name}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+    </Prose>
+  </main>
+
+  <style>
+    h2 {
+      @apply text-2xl;
+    }
+  </style>
+</Layout>

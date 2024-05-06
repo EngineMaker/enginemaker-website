@@ -5,7 +5,7 @@
   "workspaceFolder": "/app",
   "customizations": {
     "vscode": {
-      "extensions": ["astro-build.astro-vscode"],
+      "extensions": ["astro-build.astro-vscode", "bradlc.vscode-tailwindcss"],
       "settings": {}
     }
   }
