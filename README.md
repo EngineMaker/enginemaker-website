@@ -23,7 +23,7 @@ Dev Containerで開いてしばらく待つと、ブラウザで[ローカル開
 
 ## ステージング環境
 
-https://em-draft.mktoho.dev
+https://emsite-draft.mktoho.dev/
 
 mainブランチにpushすると自動でデプロイされます。
 
