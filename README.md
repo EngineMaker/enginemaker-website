@@ -30,3 +30,5 @@ mainブランチにpushすると自動でデプロイされます。
 ## Contribution
 
 協力してくれる方は[Issue](https://github.com/EngineMaker/enginemaker-website/issues/new)を立てたりプルリクを送ったりしてくださいm(\_ \_)m
+
+通知のテスト
