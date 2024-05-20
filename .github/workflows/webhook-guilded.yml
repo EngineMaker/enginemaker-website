@@ -1,0 +1,13 @@
+name: Notify Guilded
+on: [push, pull_request]
+
+jobs:
+  webhook:
+    name: Notify Guilded
+    runs-on: ubuntu-latest
+    steps:
+      - uses: guildedjs/guilded-webhook-action@v1
+        env:
+          WEBHOOK_URL: "https://media.guilded.gg/webhooks/ca932eba-99ac-4b8a-8acf-5447bab3da21/irTX3X6rm0w4oIooGWucWQAi0wusiCi4ywuGc0oqqQMKceKEsWMwM2gMECyIOoCKAam6iKQsGUeSk0CEe8iqgk"
+          WEBHOOK_USERNAME: "Github"
+          WEBHOOK_AVATAR: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
