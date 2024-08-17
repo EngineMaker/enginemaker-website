@@ -1,6 +1,7 @@
 # EngineMakerのWebサイト
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9ce34279-1710-42cd-928e-d15e8c2d60b2/deploy-status)](https://app.netlify.com/sites/emsite-draft/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ce34279-1710-42cd-928e-d15e8c2d60b2/deploy-status)](https://app.netlify.com/sites/emsite-draft/deploys)  
+ベースにしたのは[このテンプレ](https://astro.build/themes/details/positivus)  
 
 ## ローカル環境で動かす
 
