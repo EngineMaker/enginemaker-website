@@ -8,8 +8,10 @@ jobs:
     steps:
       - uses: guildedjs/guilded-webhook-action@v1
         env:
-          WEBHOOK_URL: "https://media.guilded.gg/webhooks/ca932eba-99ac-4b8a-8acf-5447bab3da21/irTX3X6rm0w4oIooGWucWQAi0wusiCi4ywuGc0oqqQMKceKEsWMwM2gMECyIOoCKAam6iKQsGUeSk0CEe8iqgk"
+          WEBHOOK_URL: "https://media.guilded.gg/webhooks/438e6641-dde4-4ce5-ba0b-65834e892ba2/uHMTCLh1W8Eiu8gYg2YieuSwGoU8aQcWuG46AaSqEyQeOes44qKeiyUaII8wSAQq4iAKqaQos0aYIqCYgmQKKi"
           WEBHOOK_USERNAME: "Github"
           WEBHOOK_AVATAR: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
         with:
-          embeds: '[{"title": "${{ github.event_name }}", "description": "これは埋め込みメッセージです", "color": 16711680}]'
+          title: ${{ github.event.head_commit.message }}
+          description: ${{ github.event.head_commit.url }}
+          color: 0x28a745
