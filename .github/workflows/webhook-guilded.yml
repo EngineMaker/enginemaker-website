@@ -12,5 +12,4 @@ jobs:
           WEBHOOK_USERNAME: "Github"
           WEBHOOK_AVATAR: "https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
         with:
-          content: "Hello, how's it going?"
-    
+          embeds: '[{"title": "${{ github.event_name }}", "description": "これは埋め込みメッセージです", "color": 16711680}]'
