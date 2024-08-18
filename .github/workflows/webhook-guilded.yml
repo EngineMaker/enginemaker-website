@@ -14,4 +14,4 @@ jobs:
         with:
           title: ${{ github.event.head_commit.message }}
           description: ${{ github.event.head_commit.url }}
-          color: 2664261
+          color: 16777215
