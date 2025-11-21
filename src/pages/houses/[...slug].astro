@@ -25,7 +25,7 @@ const { Content } = await house.render()
       <!-- 物件ごとの内容 -->
       <Content />
 
-      <h2>他の物件も見る</h2>
+      <h2 class="text-2xl">他の物件も見る</h2>
       <ul>
         {
           houses
@@ -42,10 +42,4 @@ const { Content } = await house.render()
       </ul>
     </Prose>
   </main>
-
-  <style>
-    h2 {
-      @apply text-2xl;
-    }
-  </style>
 </Layout>
