@@ -1,0 +1,31 @@
+name: Notify Discord on push
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      # 必要なブランチだけ列挙
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send message to Discord
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: |
+          repo="${{ github.repository }}"
+          branch="${{ github.ref_name }}"
+          pusher="${{ github.actor }}"
+          commit_url="https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
+
+          content="📌 リポジトリ: ${repo}\nブランチ: ${branch}\nコミット: ${commit_url}\n実行者: ${pusher}"
+
+          payload=$(printf '{"content":"%s"}' "$content")
+
+          curl -X POST \
+               -H "Content-Type: application/json" \
+               -d "$payload" \
+               "$DISCORD_WEBHOOK_URL"
