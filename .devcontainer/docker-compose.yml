@@ -3,7 +3,7 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    container_name: app
+    container_name: enginemaker-website-dev
     volumes:
       - ..:/app
     command: .devcontainer/run.sh
